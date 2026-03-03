@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zayed Kadir for CDNY • Vice President</title>
+  <meta name="description" content="Zayed Kadir for CDNY Vice President — platform, record, endorsements, campuses, and contact." />
+
+  <style>
+    :root{
+      /* Dark blue scheme */
+      --bg: #06112B;
+      --bg2:#07183B;
+      --panel:#0A214F;
+      --panel2:#0C2A61;
+      --border: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --faint: rgba(255,255,255,.58);
+
+      --accent:#2B6BFF;
+      --accent2:#7CC6FF;
+      --accent3:#22C55E;
+
+      /* more square */
+      --radius: 8px;
+      --radius2: 10px;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+
+      --max: 1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1100px 620px at 20% -10%, rgba(43,107,255,.35), transparent 60%),
+        radial-gradient(900px 520px at 110% 10%, rgba(124,198,255,.16), transparent 55%),
+        radial-gradient(900px 520px at 55% 115%, rgba(34,197,94,.10), transparent 60%),
+        linear-gradient(180deg, #040B1C 0%, var(--bg) 20%, var(--bg2) 100%);
+      overflow-x:hidden;
+      line-height:1.35;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; text-underline-offset:3px; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px; }
+
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(6,17,43,.72);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:12px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:240px;
+    }
+    .mark{
+      width:38px; height:38px;
+      border-radius: 6px; /* square logo */
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(255,255,255,.22), transparent 60%),
+        linear-gradient(135deg, var(--accent), #1B3AA6);
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow: 0 18px 50px rgba(43,107,255,.22);
+      flex:0 0 auto;
+    }
+    .brandTitle{
+      margin:0;
+      font-size:14px;
+      letter-spacing:.4px;
+      font-weight:900;
+      line-height:1.05;
+      text-transform:uppercase;
+    }
+    .brandSub{
+      margin:2px 0 0;
+      font-size:12px;
+      color:var(--muted);
+      letter-spacing:.2px;
+    }
+
+    .navlinks{
+      display:flex; align-items:center; justify-content:center;
+      gap:10px; flex-wrap:wrap;
+    }
+
+    /* square pills */
+    .pill{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:9px 12px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      font-size:12px;
+      transition: transform .12s ease, background .12s ease;
+      white-space:nowrap;
+    }
+    .pill:hover{ background: rgba(255,255,255,.07); transform: translateY(-1px); text-decoration:none; }
+
+    .actions{
+      display:flex; align-items:center; gap:10px; justify-content:flex-end;
+      min-width:240px;
+    }
+
+    /* square buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:900;
+      font-size:12px;
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease, filter .12s ease;
+      user-select:none;
+    }
+    .btn:hover{ background: rgba(255,255,255,.10); transform: translateY(-1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, var(--accent), #1C49D6);
+      border-color: rgba(255,255,255,.18);
+      box-shadow: 0 18px 55px rgba(43,107,255,.20);
+    }
+    .btn.primary:hover{ filter: brightness(1.05); }
+
+    .mobileRow{ display:none; gap:10px; margin:10px 0 12px; }
+    @media (max-width: 680px){
+      .navlinks{ display:none; }
+      .mobileRow{ display:flex; flex-wrap:wrap; }
+      .brand{ min-width:auto; }
+      .actions{ min-width:auto; }
+    }
+
+    header.hero{ padding: 42px 0 22px; }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){ .heroGrid{ grid-template-columns: 1fr; } }
+
+    .card{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .heroMain{ padding: 30px; }
+    .tagRow{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+
+    /* square tags/chips */
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size:12px;
+      font-weight:800;
+    }
+    .dot{
+      width:8px; height:8px; border-radius: 2px; /* squared dot */
+      background: var(--accent3);
+      box-shadow: 0 0 0 4px rgba(34,197,94,.10);
+    }
+
+    .heroH1{
+      margin:0 0 12px;
+      font-size: clamp(34px, 4.6vw, 54px);
+      letter-spacing: -0.9px;
+      line-height: 1.02;
+      font-weight: 950;
+    }
+    .heroP{
+      margin:0 0 18px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 70ch;
+    }
+    .heroCtas{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px; }
+
+    .heroAside{ padding: 18px; display:flex; flex-direction:column; gap:12px; }
+    .mini{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .mini h3{ margin:0 0 8px; font-size: 13px; letter-spacing:.3px; text-transform:uppercase; }
+    .mini p{ margin:0; color: var(--muted); font-size: 13px; }
+
+    .kpiRow{ margin-top:12px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .kpi{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .kpi .num{ font-weight:950; font-size:18px; }
+    .kpi .lab{ color: var(--muted); font-size:12px; margin-top:2px; }
+
+    section{ padding: 26px 0; scroll-margin-top: 90px; }
+    .sectionHead{
+      display:flex; justify-content:space-between; align-items:flex-end;
+      gap:12px; margin-bottom: 14px;
+    }
+    .sectionHead h2{
+      margin:0;
+      font-size: 18px;
+      letter-spacing: .2px;
+      text-transform: uppercase;
+    }
+    .sectionHead p{ margin:0; color: var(--muted); font-size: 13px; max-width: 75ch; }
+
+    .visionGrid{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 860px){ .visionGrid{ grid-template-columns:1fr; } }
+
+    details{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 14px;
+    }
+    summary{
+      cursor:pointer; list-style:none;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; user-select:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .sumTitle{ display:flex; align-items:center; gap:10px; font-weight:950; font-size: 13.5px; }
+
+    .chip{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-weight:900;
+      white-space:nowrap;
+    }
+    .caret{
+      width:34px; height:34px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      display:grid; place-items:center;
+      color: var(--muted);
+      transition: transform .18s ease;
+      flex:0 0 auto;
+    }
+    details[open] .caret{ transform: rotate(180deg); }
+    .detailBody{ margin-top: 10px; color: var(--muted); font-size: 13px; }
+    .detailBody ul{ margin: 8px 0 0 18px; padding:0; }
+    .detailBody li{ margin: 6px 0; }
+
+    .recordGrid{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    @media (max-width: 860px){ .recordGrid{ grid-template-columns:1fr; } }
+    .roleCard{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .roleCard h3{ margin:0 0 6px; font-size: 14px; }
+    .roleCard .meta{ color: var(--faint); font-size: 12.5px; margin-bottom: 10px; }
+    .roleCard ul{ margin:0 0 0 18px; padding:0; color: var(--muted); font-size: 13px; }
+    .roleCard li{ margin: 6px 0; }
+
+    .endorseGrid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; }
+    @media (max-width: 980px){ .endorseGrid{ grid-template-columns:1fr 1fr; } }
+    @media (max-width: 640px){ .endorseGrid{ grid-template-columns:1fr; } }
+    .endorse{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 14px;
+      min-height: 110px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .endorse .name{ font-weight:950; font-size: 13.5px; }
+    .endorse .title{ color: var(--faint); font-size: 12.5px; margin-top: -4px; }
+    .endorse .quote{ margin-top: 6px; color: var(--muted); font-size: 12.8px; border-top:1px solid var(--border); padding-top: 8px; }
+
+    .campusCard{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius2);
+      padding: 18px;
+    }
+    .campusControls{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      margin: 10px 0 14px;
+    }
+    .input{
+      flex:1 1 280px;
+      display:flex; gap:10px; align-items:center;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .input input{
+      width:100%;
+      border:0; outline:none;
+      background: transparent;
+      color: var(--text);
+      font-size: 13px;
+    }
+    select{
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding: 10px 12px;
+      font-size: 13px;
+      outline:none;
+    }
+    option{ color:#111; }
+    .list{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:10px;
+      margin-top:12px;
+    }
+    @media (max-width: 860px){ .list{ grid-template-columns:1fr; } }
+    .item{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 8px;
+      padding: 12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .item .school{ font-weight:950; font-size: 13px; }
+    .item .cat{ color: var(--faint); font-size: 12px; margin-top:2px; }
+
+    .aboutGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:12px;
+      align-items:start;
+    }
+    @media (max-width: 980px){ .aboutGrid{ grid-template-columns:1fr; } }
+
+    .prose{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius2);
+      padding: 18px;
+    }
+    .prose p{ margin:0 0 12px; color: var(--muted); font-size: 13.5px; }
+
+    .contact{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius2);
+      padding: 18px;
+      position: sticky;
+      top: 92px;
+    }
+    @media (max-width: 980px){ .contact{ position:static; } }
+    .contact h3{
+      margin:0 0 10px;
+      font-size: 14px;
+      letter-spacing:.2px;
+      text-transform: uppercase;
+    }
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding: 10px;
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      margin: 8px 0;
+    }
+    .label{ color: var(--faint); font-size: 12px; margin-bottom: 2px; }
+    .val{ font-weight:950; font-size: 12.8px; }
+    .copy{
+      border-radius: 8px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      padding: 7px 10px;
+      cursor:pointer;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .copy:hover{ background: rgba(255,255,255,.10); color: var(--text); }
+
+    footer{
+      padding: 22px 0 34px;
+      color: var(--faint);
+      font-size: 12px;
+      border-top:1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.10);
+      margin-top: 10px;
+    }
+
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: rgba(3,7,16,.82);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      font-size: 12.5px;
+      display:none;
+      z-index: 90;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1 class="brandTitle">Zayed Kadir for CDNY</h1>
+            <div class="brandSub">Candidate for Vice President</div>
+          </div>
+        </div>
+
+        <nav class="navlinks" aria-label="Primary navigation">
+          <a class="pill" href="#platform">Platform</a>
+          <a class="pill" href="#record">Record</a>
+          <a class="pill" href="#endorsements">Endorsements</a>
+          <a class="pill" href="#about">About</a>
+          <a class="pill" href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn primary" href="#contact">CONTACT</a>
+        </div>
+      </div>
+
+      <div class="mobileRow">
+        <a class="pill" href="#platform">Platform</a>
+        <a class="pill" href="#record">Record</a>
+        <a class="pill" href="#contact">TAKE ACTION</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="heroGrid">
+        <div class="card heroMain">
+          <div class="tagRow">
+            <span class="tag"><span class="dot" aria-hidden="true"></span>Building Power • Building Infrastructure • Building the Future</span>
+            <span class="tag">Zayed Kadir for CDNY Vice President</span>
+          </div>
+
+          <h2 class="heroH1">Strengthen CDNY’s infrastructure.<br/>Integrate students into real party power.</h2>
+          <p class="heroP">
+            New York is the center of American politics, but our college Democratic infrastructure doesn’t reflect that reality.
+            This platform builds chapters statewide, rebuilds NYC presence through CUNY, and turns structure into electoral power.
+          </p>
+
+          <div class="heroCtas">
+            <a class="btn primary" href="#platform">Read the Platform</a>
+            <a class="btn" href="#endorsements">See Endorsements</a>
+          </div>
+
+          <div style="margin-top:18px; padding:14px 16px; border-radius:8px; border:1px dashed rgba(255,255,255,.18); background:rgba(255,255,255,.05); color:var(--muted); font-size:13px;">
+            <strong style="color:var(--text);">“We are students doing this work — not adults pushing a narrative.”</strong>
+            <div style="margin-top:6px;color:var(--faint);font-size:12px;">— Zayed Kadir (quoted in The New York Times)</div>
+          </div>
+        </div>
+
+        <aside class="card heroAside">
+          <div class="mini">
+            <h3>What I’ll deliver</h3>
+            <p>
+              Chapters everywhere students are. Statewide communication. Real chapter funding.
+              College Democrats integrated into county parties and NYS party infrastructure.
+            </p>
+            <div class="kpiRow">
+              <div class="kpi"><div class="num">64</div><div class="lab">SUNY campuses</div></div>
+              <div class="kpi"><div class="num">25</div><div class="lab">CUNY campuses</div></div>
+            </div>
+          </div>
+
+          <div class="mini">
+            <h3>Quick links</h3>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
+              <a class="pill" href="#platform">Platform</a>
+              <a class="pill" href="#record">Record</a>
+              <a class="pill" href="#endorsements">Endorsements</a>
+              <a class="pill" href="#contact">Contact</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="platform">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Platform</h2>
+            <p>A statewide CDNY that organizes everywhere, communicates everywhere, and wins everywhere.</p>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <button class="btn" id="expandAll" type="button">Expand all</button>
+            <button class="btn" id="collapseAll" type="button">Collapse all</button>
+          </div>
+        </div>
+
+        <div class="visionGrid" id="visionGrid"></div>
+      </div>
+    </section>
+
+    <section id="record">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Record</h2>
+            <p>Running on results — building organizations, growing membership, and scaling youth infrastructure.</p>
+          </div>
+        </div>
+        <div class="recordGrid" id="recordGrid"></div>
+
+        <div class="card" style="margin-top:12px;">
+          <div style="padding:18px;">
+            <h3 style="margin:0 0 8px;font-size:14px;text-transform:uppercase;letter-spacing:.2px;">The Bottom Line</h3>
+            <p style="margin:0;color:var(--muted);font-size:13.5px;">
+              New York deserves a stronger, broader, more inclusive College Democrats organization. Let’s build it. Together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="endorsements">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>Endorsements</h2>
+            <p>Leaders across the youth Democratic ecosystem.</p>
+          </div>
+        </div>
+        <div class="endorseGrid" id="endorseGrid"></div>
+        <div style="margin-top:12px;color:var(--muted);font-size:13px;">
+          Want to add a quote? <a href="#contact">Send an endorsement note.</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionHead">
+          <div>
+            <h2>About</h2>
+            <p>Background and why this work is personal.</p>
+          </div>
+        </div>
+
+        <div class="aboutGrid">
+          <div class="prose">
+            <p>
+              I’m a born-and-raised New Yorker, originally from Queens and now rooted in the Hudson Valley, where I first got involved in politics volunteering
+              for State Senator James Skoufis’s reelection campaign. I’ve led at every level — local, state, caucus, and national — building chapters, raising funds,
+              and expanding youth political infrastructure across the country.
+            </p>
+            <p>
+              My commitment to this work is personal: I grew up in a working-class immigrant family where politics wasn’t theory — it shaped whether we could afford insulin,
+              groceries, or stability. Those experiences taught me that leadership is responsibility, and that survival should not be a prerequisite for opportunity.
+            </p>
+            <p style="margin:0;color:var(--muted);font-size:13.5px;">
+              <strong style="color:var(--text);">Goal:</strong> Ensure that tomorrow’s party truly starts today — on every campus in New York State.
+            </p>
+          </div>
+
+          <div class="contact" id="contact">
+            <h3>Contact</h3>
+
+            <div class="row">
+              <div>
+                <div class="label">Email</div>
+                <div class="val" id="emailVal">zayedkadir81@gmail.com</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="label">Phone</div>
+                <div class="val" id="phoneVal">+1 (347) 264-0359</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="label">Instagram</div>
+                <div class="val" id="igVal">@zayedkadir</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="label">Twitter</div>
+                <div class="val" id="twVal">@zayedkadir</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <div class="label">LinkedIn</div>
+                <div class="val" id="liVal">zayed-kadir-7b124a392</div>
+              </div>
+            </div>
+
+            <div style="margin-top:14px;color:var(--muted);font-size:12.8px;">
+              Interested in endorsing, partnering, or helping build youth organizing across New York? Let’s connect.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+          <div>© <span id="year"></span> Zayed Kadir for CDNY</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a class="pill" href="#platform">Platform</a>
+            <a class="pill" href="#record">Record</a>
+            <button class="pill" id="backToTop" type="button" style="cursor:pointer;">Back to top ↑</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const $ = (q, el=document) => el.querySelector(q);
+    const $$ = (q, el=document) => [...el.querySelectorAll(q)];
+    const toast = (msg) => {
+      const t = $("#toast");
+      t.textContent = msg;
+      t.style.display = "block";
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(()=>{ t.style.display="none"; }, 1400);
+    };
+    const escapeHtml = (str) => String(str)
+      .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;").replaceAll("'","&#039;");
+
+    // Based on the provided PDF content. :contentReference[oaicite:0]{index=0}
+    const DATA = {
+      vision: [
+        { n:1, title:"A Chapter at Every SUNY", tag:"Statewide growth",
+          bullets:[
+            "There are 64 SUNY colleges in New York State — CDNY should have chapters at every one.",
+            "To win statewide elections, we need organizing power upstate, downstate, rural, suburban, and urban alike."
+          ]},
+        { n:2, title:"Rebuilding Our Presence in NYC Through CUNY", tag:"NYC infrastructure",
+          bullets:[
+            "Right now, there are no CUNY College Democrats chapters — that’s unacceptable.",
+            "CUNY serves 240,000 students across 25 campuses; NYC presence shouldn’t be limited to a handful of private universities.",
+            "Make CUNY organizing a top priority."
+          ]},
+        { n:3, title:"Double-Chartering & Coalition-Building", tag:"Big-tent coalitions",
+          bullets:[
+            "Prioritize double-chartering with Indivisible, Disrupt, Young Liberals, Young Progressives, DSA, and issue-based campus orgs.",
+            "We don’t win by organizing in silos — success requires people feeling included, supported, and valued."
+          ]},
+        { n:4, title:"Statewide Communication & Community", tag:"Slack/Discord",
+          bullets:[
+            "Introduce statewide Slack/Discord so members can communicate across campuses.",
+            "Share resources and tools, build camaraderie and collective power, coordinate rapid response and electoral work.",
+            "CDNY should be a movement, not a mailing list."
+          ]},
+        { n:5, title:"Chapter Grants for Real Organizing", tag:"Invest in chapters",
+          bullets:[
+            "If we want chapters to do real work, we need to fund that work.",
+            "Advocate for grants supporting electoral organizing, voter registration & GOTV, campus events and issue advocacy.",
+            "Strong chapters require real investment."
+          ]},
+        { n:6, title:"Bringing College Democrats Into the Party", tag:"Inside power",
+          bullets:[
+            "Establish formal College Democrats representation within the NYS Democratic Party (a College Dems Rep like other states).",
+            "Integrate chapters with county parties: joint voter registration, GOTV, and connections to campaigns and elected officials.",
+            "Recruit and run a statewide slate of College Democrats for county committee seats to build long-term youth infrastructure."
+          ]},
+        { n:7, title:"Council of Community College Democrats", tag:"Commuter & CC focus",
+          bullets:[
+            "Create a Council of Community College Democrats working group.",
+            "Expand CDNY into community colleges, support commuter students, and build leadership pipelines in often-ignored spaces.",
+            "Every student deserves representation."
+          ]},
+        { n:8, title:"Making Membership Meaningful", tag:"Member value",
+          bullets:[
+            "Connect members to organizing opportunities.",
+            "Share resources and training; host professional development and career events.",
+            "Build pathways into campaigns, party leadership, and public service — membership should be active and rewarding."
+          ]}
+      ],
+
+      record: [
+        { title:"High School Democrats of America — National Chairman", meta:"Jul 2025 – Present",
+          bullets:[
+            "Expanded from 40 to 52 state and territory chapters",
+            "Grew membership by 2,000+",
+            "Built 350+ local chapters nationwide",
+            "Directed a 4-day national conference in Washington, D.C.",
+            "Built cross-organizational partnerships with youth coalitions and elected officials"
+          ]},
+        { title:"Democratic National Committee — NY DNC Member", meta:"Executive Committee & Accessibility Task Force (Jul 2025 – Present)",
+          bullets:[
+            "Youngest member appointed to the DNC Executive Committee",
+            "Help lead a Youth Coordinated Campaign coalition for the 2026 midterms",
+            "Advise senior leadership on youth voter engagement and infrastructure strategy",
+            "Develop accessibility standards for national organizing programs",
+            "Integrate accessibility into youth outreach strategy"
+          ]},
+        { title:"Raj for NYS Comptroller — Youth Organizer", meta:"Jan 2026 – Present",
+          bullets:[
+            "Designed and launched a statewide youth phonebanking program",
+            "Built an engagement ladder from volunteers to fellows and interns",
+            "Led endorsement outreach to advocacy orgs and unions",
+            "Managed volunteer systems and data tracking for field operations"
+          ]},
+        { title:"Zeeshan for Congress (TX-33) — Youth Phonebanking Program Manager", meta:"Jan 2026 – Present",
+          bullets:[
+            "Launched and scaled a persuasion-focused youth phonebanking operation",
+            "Supervised 50 paid and volunteer phonebankers",
+            "Oversaw recruitment, onboarding, and performance standards",
+            "Built scheduling systems and accountability infrastructure"
+          ]},
+        { title:"Monroe-Woodbury Community Coalition — Coalition Member", meta:"Feb 2023 – Present",
+          bullets:[
+            "Collaborate with elected officials, agencies, and stakeholders",
+            "Advocate for student mental health and substance abuse prevention",
+            "Coordinate school-wide civic and wellness initiatives",
+            "Represent youth voices in cross-sector policy discussions"
+          ]},
+        { title:"HSDA — National Diversity Director", meta:"Jul 2024 – Jul 2025",
+          bullets:[
+            "Managed 12 national affinity caucuses and leadership teams",
+            "Reestablished First-Gen, AAPI, Hindu, and Indigenous Peoples Caucuses",
+            "Facilitated 100+ trainings, workshops, and national programs",
+            "Grew caucus membership by 1,000+"
+          ]}
+      ],
+
+      endorsements: [
+        { name:"Sohali Vaddulla", title:"College Democrats of America President", quote:"" },
+        { name:"Sunjay Muralitharan", title:"92nd President of the College Democrats of America", quote:"" },
+        { name:"Jovan Richards", title:"New York State Young Democrats President", quote:"" },
+        { name:"Fatima Heyward", title:"Young Democrats of America President", quote:"" },
+        { name:"Stephanie Campanha Wheaton", title:"Young Democrats of America DNC Representative", quote:"" },
+        { name:"Tandeep Kaur", title:"NYS Young Asian Democrats Chair", quote:"" },
+        { name:"Clifford Robin Temprosa Li", title:"NYS Young Asian Democrats Vice Chair", quote:"" },
+        { name:"Carlos Calzadilla-Palacio", title:"Disrupt Politics Founder • Brooklyn Young Democrats President", quote:"" },
+        { name:"Zak Constantine", title:"Orange County Democratic Party Chairman", quote:"" }
+      ],
+
+    };
+
+    function renderVision(){
+      const vg = $("#visionGrid");
+      vg.innerHTML = "";
+      DATA.vision.forEach(v => {
+        const d = document.createElement("details");
+        d.innerHTML = `
+          <summary>
+            <div class="sumTitle">
+              <span class="chip">#${v.n}</span>
+              <span>${escapeHtml(v.title)}</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <span class="chip">${escapeHtml(v.tag)}</span>
+              <span class="caret" aria-hidden="true">⌄</span>
+            </div>
+          </summary>
+          <div class="detailBody">
+            <ul>${v.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}</ul>
+          </div>
+        `;
+        vg.appendChild(d);
+      });
+    }
+
+    function renderRecord(){
+      const rg = $("#recordGrid");
+      rg.innerHTML = "";
+      DATA.record.forEach(r => {
+        const div = document.createElement("div");
+        div.className = "roleCard";
+        div.innerHTML = `
+          <h3>${escapeHtml(r.title)}</h3>
+          <div class="meta">${escapeHtml(r.meta || "")}</div>
+          ${r.bullets && r.bullets.length
+            ? `<ul>${r.bullets.map(b => `<li>${escapeHtml(b)}</li>`).join("")}</ul>`
+            : `<div style="color:var(--muted);font-size:13px;">(Details available upon request.)</div>`
+          }
+        `;
+        rg.appendChild(div);
+      });
+    }
+
+    function renderEndorsements(){
+      const eg = $("#endorseGrid");
+      eg.innerHTML = "";
+      DATA.endorsements.forEach(e => {
+        const div = document.createElement("div");
+        div.className = "endorse";
+        div.innerHTML = `
+          <div class="name">${escapeHtml(e.name)}</div>
+          <div class="title">${escapeHtml(e.title)}</div>
+          <div class="quote">${escapeHtml(e.quote)}</div>
+        `;
+        eg.appendChild(div);
+      });
+    }
+
+    function renderCampuses(){
+      const q = $("#campusSearch").value.trim().toLowerCase();
+      const f = $("#campusFilter").value;
+
+      const items = DATA.campuses
+        .filter(([name, cat]) => (f === "all" ? true : cat === f))
+        .filter(([name]) => !q || name.toLowerCase().includes(q))
+        .sort((a,b)=> a[0].localeCompare(b[0]));
+
+      $("#campusCount").textContent = String(items.length);
+
+      const list = $("#campusList");
+      list.innerHTML = "";
+      items.forEach(([name, cat]) => {
+        const div = document.createElement("div");
+        div.className = "item";
+        div.innerHTML = `
+          <div>
+            <div class="school">${escapeHtml(name)}</div>
+            <div class="cat">${escapeHtml(cat)}</div>
+          </div>
+          <span class="chip">${escapeHtml(cat)}</span>
+        `;
+        list.appendChild(div);
+      });
+
+      window.__visibleCampusItems = items;
+    }
+
+    async function copyText(text){
+      try{
+        await navigator.clipboard.writeText(text);
+        toast("Copied!");
+      }catch(e){
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        ta.remove();
+        toast("Copied!");
+      }
+    }
+
+    function contactBlock(){
+      return [
+        `Email: ${$("#emailVal").textContent.trim()}`,
+        `Phone: ${$("#phoneVal").textContent.trim()}`,
+        `Instagram: ${$("#igVal").textContent.trim()}`,
+        `Twitter: ${$("#twVal").textContent.trim()}`,
+        `LinkedIn: ${$("#liVal").textContent.trim()}`
+      ].join("\\n");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderVision();
+      renderRecord();
+      renderEndorsements();
+      renderCampuses();
+
+      $("#expandAll").addEventListener("click", () => $$("details", $("#visionGrid")).forEach(d => d.open = true));
+      $("#collapseAll").addEventListener("click", () => $$("details", $("#visionGrid")).forEach(d => d.open = false));
+
+      $("#campusSearch").addEventListener("input", renderCampuses);
+      $("#campusFilter").addEventListener("change", renderCampuses);
+      $("#campusClear").addEventListener("click", () => {
+        $("#campusSearch").value = "";
+        $("#campusFilter").value = "all";
+        renderCampuses();
+      });
+
+      $("#copyCampuses").addEventListener("click", () => {
+        const items = window.__visibleCampusItems || [];
+        const txt = items.map(([n,c]) => `${n} — ${c}`).join("\\n");
+        copyText(txt || "No campuses in view.");
+      });
+
+      document.querySelectorAll(".copy").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const key = btn.dataset.copy;
+          const map = {
+            email: $("#emailVal").textContent.trim(),
+            phone: $("#phoneVal").textContent.trim(),
+            ig: $("#igVal").textContent.trim(),
+            tw: $("#twVal").textContent.trim(),
+            li: $("#liVal").textContent.trim()
+          };
+          copyText(map[key] || "");
+        });
+      });
+
+      $("#copyContactBlock").addEventListener("click", () => copyText(contactBlock()));
+      $("#copyAllContact").addEventListener("click", () => copyText(contactBlock()));
+
+      const email = $("#emailVal").textContent.trim();
+      $("#mailtoBtn").href =
+        `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent("Endorsement / Support for Zayed Kadir (CDNY VP)")}` +
+        `&body=${encodeURIComponent("Hi Zayed,\\n\\nI’d like to endorse/support your campaign. Here’s a short note you can use:\\n\\n[Write endorsement quote]\\n\\nBest,\\n[Name]\\n[Title/Organization]\\n")}`;
+
+      $("#backToTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      $("#year").textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
